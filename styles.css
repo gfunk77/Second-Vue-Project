@@ -13,7 +13,7 @@ header,
   background-color: #e3f6f5;
   margin: 3rem auto;
   width: 90vw;
-  max-width: 35rem;
+  max-width: 45rem;
   text-align: center;
   color: #272343;
   letter-spacing: 4px;
@@ -41,10 +41,23 @@ header,
 }
 #events p {
   background-color: #ffd803;
+  margin-top: 1rem;
   padding: 0.5rem 2rem;
   font-size: 1.25rem;
   font-weight: bold;
   letter-spacing: 4px;
   border-radius: 25px;
   box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.27);
+}
+#events input {
+  margin: 1.5rem;
+  padding: 0.25rem;
+  border-radius: 25px;
+  border: 2px solid #ffd803;
+}
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 5%;
 }

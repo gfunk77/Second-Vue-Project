@@ -7,19 +7,32 @@
     <title>Event Handling with Vue</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="#" />
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="app.js"></script>
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
   </head>
   <body>
-    <header>
+    
+<header>
       <h2>Event Handling with Vue</h2>
     </header>
     <section id="events">
       <h2>Events</h2>
-      <button>Increase</button>
-      <button>Reset</button>
-      <button>Decrease</button>
-      <p>Total:</p>
-    </section>
+      <button v-on:click="increment">Increase</button>
+      <button v-on:click="reset">Reset</button ">
+      <button v-on:click="decrement">Decrease</button>
+      <p>Total: {{ counter }}</p> 
+      <p v-once>Starter Total: {{ counter }}</p>
+      <input
+       v-on:input="inputName" 
+       v-on:keyup.enter="confirmName"
+       type="text">
+      <p>Your Name: {{ confirmedName }}</p>
+     
+      <form v-on:submit.prevent="message">
+        <input type="text">
+        <button>submit</button>
+      </form>
+      <img v-bind:src="cat" alt="cat">
+    </section> 
   </body>
 </html>
